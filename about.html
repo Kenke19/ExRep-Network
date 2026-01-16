@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About EXREP Network - Your African Expansion Partner</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1E3A8A',
+                        'primary-dark': '#1E40AF',
+                        'secondary': '#F59E0B',
+                        'accent': '#3B82F6',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #1E3A8A 0%, #F59E0B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon-bg {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+<!-- Header -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 py-4 transition-all duration-300 glass-effect">
+        <div class="container mx-auto px-2 md:px-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                        <img src="exrep.png" alt="Exrep Logo" class="w-15 h-10 object-cover bg-transparent rounded-none p-0 border-0 shadow-none">
+                    
+                    <div class="flex flex-col">
+                        <h1 class="text-2xl font-bold text-primary">Exrep</h1>
+                        <p class="text-xs text-gray-500 font-medium">Innovating for Nigeria</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="font-medium text-gray-700 hover:text-primary transition-colors duration-300">Home</a>
+                    <a href="about.html" class="font-medium text-gray-700 hover:text-primary transition-colors duration-300">About</a>
+                    <a href="partners.html" class="font-medium text-gray-700 hover:text-primary transition-colors duration-300">Partners</a>
+                    <a href="contact.html" class="font-medium text-gray-700 hover:text-primary transition-colors duration-300">Contact</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-4 px-6 hidden">
+            <div class="flex flex-col space-y-4">
+                <a href="#" class="font-medium text-gray-700 hover:text-primary py-2">Home</a>
+                <a href="#" class="font-medium text-gray-700 hover:text-primary py-2">About</a>
+                <a href="#" class="font-medium text-gray-700 hover:text-primary py-2">Partners</a>
+                <a href="#" class="font-medium text-gray-700 hover:text-primary py-2">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-28 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-blue-50 via-white to-amber-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="max-w-4xl mx-auto text-center animate-slide-up">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                    About <span class="gradient-text">EXREP Network</span>
+                </h1>
+                <p class="text-xl text-gray-600 mb-8">
+                    Your Trusted Partner for African Market Expansion
+                </p>
+                <p class="text-lg text-gray-600">
+                    EXREP Network is a specialized expansion and operational representative company dedicated to helping international brands successfully enter and scale in the Nigerian market.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Are Section -->
+<section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4 md:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Text Content -->
+            <div class="order-2 lg:order-1 animate-fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8">Who We Are</h2>
+                <div class="space-y-6 text-gray-600 text-lg">
+                    <p>
+                        EXREP Network is a specialized expansion and operational representative company dedicated to helping international brands successfully enter and scale in the Nigerian market. We bridge the gap between global brands and African consumers by providing comprehensive on-ground operational support.
+                    </p>
+                    <p>
+                        Founded with a vision to make African market expansion accessible and risk-free for international businesses, EXREP Network operates as an invisible partner—handling all local complexities while you maintain full control of your brand, pricing, and customer relationships.
+                    </p>
+                </div>
+                
+                <!-- Optional stats or key points -->
+                <div class="mt-10 grid grid-cols-2 gap-6">
+                    <div class="text-center p-4 bg-gray-50 rounded-xl">
+                        <div class="text-3xl font-bold text-primary mb-2">100%</div>
+                        <p class="text-gray-600 text-sm">Operational Support</p>
+                    </div>
+                    <div class="text-center p-4 bg-gray-50 rounded-xl">
+                        <div class="text-3xl font-bold text-secondary mb-2">0%</div>
+                        <p class="text-gray-600 text-sm">Capital Risk</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image Container -->
+            <div class="order-1 lg:order-2 animate-slide-up">
+                <div class="relative">
+                    <!-- Placeholder for your image -->
+                    <div class="bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl h-96 flex items-center justify-center shadow-xl overflow-hidden">
+                        <!-- This is where your image will go -->
+                        <img src="about-image.jpg" alt="About EXREP Network" class="object-cover w-full h-full">
+                    </div>
+                    
+                    <!-- Optional decorative elements -->
+                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-secondary/10 rounded-full -z-10"></div>
+                    <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-primary/10 rounded-full -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- What We Do Section -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">What We Do</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-2xl card-hover border border-gray-100 animate-fade-in">
+                    <div class="service-icon-bg bg-blue-100 text-primary mb-6">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Manufacturing & Production Management</h3>
+                    <p class="text-gray-600">
+                        Partner with vetted local manufacturers to ensure quality production that meets your specifications.
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-2xl card-hover border border-gray-100 animate-fade-in">
+                    <div class="service-icon-bg bg-green-100 text-green-600 mb-6">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Quality Control & Assurance</h3>
+                    <p class="text-gray-600">
+                        Ensure every product meets international standards through rigorous quality checks and processes.
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-2xl card-hover border border-gray-100 animate-fade-in">
+                    <div class="service-icon-bg bg-amber-100 text-amber-600 mb-6">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Warehousing & Inventory Management</h3>
+                    <p class="text-gray-600">
+                        Secure storage and advanced inventory tracking systems to manage your stock efficiently.
+                    </p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-2xl card-hover border border-gray-100 animate-fade-in">
+                    <div class="service-icon-bg bg-purple-100 text-purple-600 mb-6">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Order Fulfillment & Last-Mile Delivery</h3>
+                    <p class="text-gray-600">
+                        Fast, reliable delivery across Nigeria with real-time tracking and customer notifications.
+                    </p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-2xl card-hover border border-gray-100 animate-fade-in">
+                    <div class="service-icon-bg bg-red-100 text-red-600 mb-6">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Local Customer Support</h3>
+                    <p class="text-gray-600">
+                        Handle inquiries, returns, and service in local languages and cultural context.
+                    </p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-2xl card-hover border border-gray-100 animate-fade-in">
+                    <div class="service-icon-bg bg-cyan-100 text-cyan-600 mb-6">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Market Intelligence</h3>
+                    <p class="text-gray-600">
+                        Provide insights on consumer trends, competition, and market opportunities for strategic decisions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Our Mission & Vision</h2>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Mission -->
+                <div class="bg-gradient-to-br from-primary to-primary-dark text-white rounded-2xl p-8 shadow-xl animate-slide-up">
+                    <div class="text-4xl mb-6">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6">Our Mission</h3>
+                    <p class="text-lg opacity-90">
+                        To empower international brands to expand into Africa without operational risk, capital investment, or compromising quality.
+                    </p>
+                </div>
+                
+                <!-- Vision -->
+                <div class="bg-gradient-to-br from-secondary to-amber-500 text-white rounded-2xl p-8 shadow-xl animate-slide-up">
+                    <div class="text-4xl mb-6">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6">Our Vision</h3>
+                    <p class="text-lg opacity-90">
+                        To become Africa's leading regional operational partner, enabling seamless market expansion for brands across every African nation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Our Founder -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Meet Our Founder</h2>
+            
+            <div class="flex flex-col lg:flex-row items-center gap-12 animate-fade-in">
+                <!-- Founder Photo -->
+                <div class="lg:w-1/3">
+                    <div class="relative">
+                        <div class="w-64 h-64 rounded-full bg-gradient-to-br from-primary to-secondary mx-auto flex items-center justify-center text-white text-5xl font-bold shadow-2xl">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="absolute -bottom-3 -right-3 w-16 h-16 bg-secondary rounded-full flex items-center justify-center text-white text-2xl">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Founder Info -->
+                <div class="lg:w-2/3">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4">[Founder Name]</h3>
+                    <div class="text-primary font-semibold text-lg mb-6">Founder & CEO, EXREP Network</div>
+                    
+                    <div class="space-y-4 text-gray-600">
+                        <p>
+                            Founded EXREP Network to simplify African market expansion for global brands, recognizing the gap where international companies faced operational complexity and high capital requirements.
+                        </p>
+                        <p>
+                            With deep expertise in Nigerian business operations, logistics, and market dynamics, [Founder Name] created a zero-risk, turnkey solution for confident expansion into Africa's largest market.
+                        </p>
+                        <p>
+                            Holds [Relevant Credentials/Experience] and is passionate about positioning Nigeria as a premier business destination for international brands seeking growth opportunities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Our Values</h2>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Value 1 -->
+                <div class="bg-gray-50 p-8 rounded-2xl text-center card-hover animate-fade-in">
+                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-award text-3xl text-primary"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Excellence</h4>
+                    <p class="text-gray-600">
+                        We deliver global quality standards in every operation, ensuring your brand reputation is maintained.
+                    </p>
+                </div>
+                
+                <!-- Value 2 -->
+                <div class="bg-gray-50 p-8 rounded-2xl text-center card-hover animate-fade-in">
+                    <div class="w-16 h-16 bg-amber-100 rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-handshake text-3xl text-secondary"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Integrity</h4>
+                    <p class="text-gray-600">
+                        Transparency and trust in every partnership form the foundation of our business relationships.
+                    </p>
+                </div>
+                
+                <!-- Value 3 -->
+                <div class="bg-gray-50 p-8 rounded-2xl text-center card-hover animate-fade-in">
+                    <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-lightbulb text-3xl text-green-600"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Innovation</h4>
+                    <p class="text-gray-600">
+                        Leveraging technology and local insights for efficiency and competitive advantage in the market.
+                    </p>
+                </div>
+                
+                <!-- Value 4 -->
+                <div class="bg-gray-50 p-8 rounded-2xl text-center card-hover animate-fade-in">
+                    <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-users text-3xl text-purple-600"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Partnership</h4>
+                    <p class="text-gray-600">
+                        Your success is our success. We work as an extension of your team to achieve shared goals.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 md:py-24 bg-gradient-to-r from-primary to-primary-dark text-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Expand with Confidence?</h2>
+                <p class="text-xl opacity-90 mb-10">
+                    Let EXREP Network handle the complexities of African market expansion while you focus on growing your brand.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <a href="contact.html" class="bg-white text-primary px-10 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg">
+                        Contact Us Today <i class="ml-2 fas fa-envelope"></i>
+                    </a>
+                    <a href="partners.html" class="bg-transparent border-2 border-white text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors duration-300">
+                        View Our Partners <i class="ml-2 fas fa-handshake"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid md:grid-cols-5 gap-8 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <img src="exrep.png" alt="Exrep Logo" class="w-15 h-10 object-cover bg-transparent rounded-none p-0 border-0 shadow-none mr-4">
+                        <h2 class="text-2xl font-bold text-white">Exrep</h2>
+                    </div>
+                    <p class="mb-6">
+                        We provide end-to-end operational support for international brands expanding into Nigeria. Let us handle the complexity on the ground while you focus on your brand.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="hover:text-white transition-colors duration-300">About Us</a></li>
+                        <li><a href="careers.html" class="hover:text-white transition-colors duration-300">Careers</a></li>
+                        <li><a href="partners.html" class="hover:text-white transition-colors duration-300">Partners</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Contact</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-3 mt-1 text-primary"></i>
+                            <span>Abuja, Nigeria</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-primary"></i>
+                            <span>+234 814 185 7196</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-primary"></i>
+                            <span>info@exrep.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 text-center md:text-left flex flex-col md:flex-row justify-between">
+                <p>&copy; 2026 Exrep Network. All rights reserved.</p>
+                <div class="mt-4 md:mt-0">
+                    <a href="#" class="mr-6 hover:text-white transition-colors duration-300">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors duration-300">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactive Features -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Header scroll effect
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md', 'bg-white');
+                header.classList.remove('glass-effect');
+            } else {
+                header.classList.remove('shadow-md', 'bg-white');
+                header.classList.add('glass-effect');
+            }
+        });
+        
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all sections and service cards for animation
+        document.querySelectorAll('section, .animate-fade-in, .animate-slide-up').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>

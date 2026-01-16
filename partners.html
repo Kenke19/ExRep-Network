@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Partners - EXREP Network</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1E3A8A',
+                        'primary-dark': '#1E40AF',
+                        'secondary': '#F59E0B',
+                        'accent': '#3B82F6',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                        'gradient': 'gradient 3s ease infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        gradient: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #1E3A8A 0%, #F59E0B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .animated-gradient {
+            background: linear-gradient(-45deg, #1E3A8A, #3B82F6, #F59E0B, #1E40AF);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .step-connector {
+            position: relative;
+        }
+        
+        .step-connector:not(:last-child):after {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, #1E3A8A, #F59E0B);
+            z-index: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .step-connector:not(:last-child):after {
+                display: none;
+            }
+        }
+        
+        .partner-card-gradient {
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+<!-- Header -->
+    <header id="header" class="fixed top-0 left-0 w-full z-50 py-4 transition-all duration-300 glass-effect">
+        <div class="container mx-auto px-2 md:px-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                        <img src="exrep.png" alt="Exrep Logo" class="w-15 h-10 object-cover bg-transparent rounded-none p-0 border-0 shadow-none">
+                    
+                    <div class="flex flex-col">
+                        <h1 class="text-2xl font-bold text-primary">Exrep</h1>
+                        <p class="text-xs text-gray-500 font-medium">Innovating for Nigeria</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="font-medium text-gray-700 hover:text-primary transition-colors duration-300">Home</a>
+                    <a href="about.html" class="font-medium text-gray-700 hover:text-primary transition-colors duration-300">About</a>
+                    <a href="partners.html" class="font-medium text-gray-700 hover:text-primary transition-colors duration-300">Partners</a>
+                    <a href="contact.html" class="font-medium text-gray-700 hover:text-primary transition-colors duration-300">Contact</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-4 px-6 hidden">
+            <div class="flex flex-col space-y-4">
+                <a href="index.html" class="font-medium text-gray-700 hover:text-primary py-2">Home</a>
+                <a href="about.html" class="font-medium text-gray-700 hover:text-primary py-2">About</a>
+                <a href="partners.html" class="font-medium text-gray-700 hover:text-primary py-2">Partners</a>
+                <a href="contact.html" class="font-medium text-gray-700 hover:text-primary py-2">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Enhanced Hero Section -->
+    <section class="pt-28 pb-20 md:pt-32 md:pb-24 animated-gradient text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/10"></div>
+        <div class="absolute top-10 left-10 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto text-center animate-slide-up">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                    Powering <span class="text-white">Global Success</span> in Africa
+                </h1>
+                <p class="text-xl opacity-90 mb-6">
+                    Strategic partnerships that transform market expansion from complex challenge to seamless opportunity
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Partner With Us Section -->
+    <section id="partner-process" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full font-semibold text-sm mb-4">PARTNERSHIP PROCESS</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Streamlined Partnership Journey</h2>
+                <p class="text-lg text-gray-600">
+                    A proven, step-by-step approach that transforms market entry from daunting challenge to strategic advantage
+                </p>
+            </div>
+            
+            <!-- Enhanced Process Steps -->
+            <div class="grid md:grid-cols-5 gap-8 relative mb-16">
+                <!-- Step 1 -->
+                <div class="step-connector text-center relative z-10 group">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-primary to-blue-500 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <div class="relative">
+                            <span>1</span>
+                            <div class="absolute -inset-1 bg-primary/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-bold mb-4">Submit Your Proposal</h4>
+                    <p class="text-gray-600 text-sm">Send us an overview of your brand, product/service, and expansion goals via email.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="step-connector text-center relative z-10 group">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <div class="relative">
+                            <span>2</span>
+                            <div class="absolute -inset-1 bg-blue-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-bold mb-4">Discovery Call</h4>
+                    <p class="text-gray-600 text-sm">We schedule a consultation to understand your requirements and discuss partnership fit.</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="step-connector text-center relative z-10 group">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-cyan-500 to-secondary rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <div class="relative">
+                            <span>3</span>
+                            <div class="absolute -inset-1 bg-cyan-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-bold mb-4">Partnership Agreement</h4>
+                    <p class="text-gray-600 text-sm">We draft a customized contract outlining responsibilities, pricing, and terms.</p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="step-connector text-center relative z-10 group">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-secondary to-amber-500 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <div class="relative">
+                            <span>4</span>
+                            <div class="absolute -inset-1 bg-secondary/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-bold mb-4">Quality Testing Phase</h4>
+                    <p class="text-gray-600 text-sm">We conduct production tests with local partners to ensure quality standards.</p>
+                </div>
+                
+                <!-- Step 5 -->
+                <div class="step-connector text-center relative z-10 group">
+                    <div class="w-20 h-20 mx-auto bg-gradient-to-br from-amber-500 to-orange-500 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <div class="relative">
+                            <span>5</span>
+                            <div class="absolute -inset-1 bg-amber-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-bold mb-4">Launch</h4>
+                    <p class="text-gray-600 text-sm">We go live and handle all operations in Nigeria under your brand.</p>
+                </div>
+            </div>
+            
+            <!-- Enhanced Partnership Benefits -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-gray-50 p-8 rounded-2xl card-hover animate-fade-in">
+                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Risk-Free Expansion</h3>
+                    <p class="text-gray-600">Zero capital investment required. We handle all operational complexities while you maintain brand control.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-2xl card-hover animate-fade-in">
+                    <div class="w-14 h-14 bg-secondary/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-rocket text-2xl text-secondary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Accelerated Timeline</h3>
+                    <p class="text-gray-600">Reduce time-to-market by up to 80% with our proven processes and local market expertise.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-2xl card-hover animate-fade-in">
+                    <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-2xl text-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Scalable Growth</h3>
+                    <p class="text-gray-600">Flexible solutions that grow with your business, from initial entry to full-scale market dominance.</p>
+                </div>
+            </div>
+            
+            <!-- Enhanced Partnership CTA -->
+            <div class="bg-gradient-to-r from-primary to-primary-dark text-white rounded-2xl p-8 md:p-12 shadow-2xl animate-fade-in">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+                    <div>
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4">Start Your African Expansion Journey Today</h3>
+                        <p class="text-lg opacity-90">Connect with our partnerships team for a personalized consultation</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="mailto:partnerships@exrepnetwork.com" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg text-center">
+                            <i class="fas fa-envelope mr-2"></i> partnerships@exrepnetwork.com
+                        </a>
+                        <a href="contact.html" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-300 text-center">
+                            Schedule Discovery Call
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+            
+            <!-- Trust Indicators -->
+            <div class="mt-16 bg-gray-50 rounded-2xl p-8">
+                <h3 class="text-2xl font-bold text-center mb-8">Why Partners Choose EXREP</h3>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-primary mb-2">24/7</div>
+                        <div class="text-gray-600">Operational Support</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-secondary mb-2">98%</div>
+                        <div class="text-gray-600">Client Satisfaction</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-accent mb-2">0%</div>
+                        <div class="text-gray-600">Capital Risk</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-primary mb-2">12</div>
+                        <div class="text-gray-600">Months Average ROI</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced CTA Section -->
+    <section class="py-16 md:py-24 bg-gradient-to-r from-primary to-primary-dark text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full">
+            <div class="absolute top-10 left-10 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Write Your Success Story?</h2>
+                <p class="text-xl opacity-90 mb-10">
+                    Join the ranks of global innovators who have transformed African market expansion from challenge to competitive advantage
+                </p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-6 mb-12">
+                    <a href="mailto:partnerships@exrepnetwork.com" class="bg-white text-primary px-10 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl">
+                        <i class="fas fa-paper-plane mr-2"></i> Submit Partnership Inquiry
+                    </a>
+                    <a href="contact.html" class="bg-transparent border-2 border-white text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors duration-300">
+                        <i class="fas fa-calendar-alt mr-2"></i> Schedule Strategy Session
+                    </a>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 max-w-2xl mx-auto">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                        <div class="text-center md:text-left">
+                            <div class="font-bold text-lg mb-2">Exclusive Partnership Offer</div>
+                            <div class="opacity-90">First 3 months of operational support at 50% discount for qualified partners</div>
+                        </div>
+                        <a href="contact.html" class="bg-secondary text-white px-6 py-3 rounded-lg font-semibold hover:bg-amber-600 transition-colors duration-300 whitespace-nowrap">
+                            Claim Offer
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid md:grid-cols-5 gap-8 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <img src="exrep.png" alt="Exrep Logo" class="w-15 h-10 object-cover bg-transparent rounded-none p-0 border-0 shadow-none mr-4">
+                        <h2 class="text-2xl font-bold text-white">Exrep</h2>
+                    </div>
+                    <p class="mb-6">
+                        We provide end-to-end operational support for international brands expanding into Nigeria. Let us handle the complexity on the ground while you focus on your brand.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="hover:text-white transition-colors duration-300">About Us</a></li>
+                        <li><a href="careers.html" class="hover:text-white transition-colors duration-300">Careers</a></li>
+                        <li><a href="partners.html" class="hover:text-white transition-colors duration-300">Partners</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Contact</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-3 mt-1 text-primary"></i>
+                            <span>Abuja, Nigeria</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-primary"></i>
+                            <span>+234 814 185 7196</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-primary"></i>
+                            <span>info@exrep.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 text-center md:text-left flex flex-col md:flex-row justify-between">
+                <p>&copy; 2026 Exrep Network. All rights reserved.</p>
+                <div class="mt-4 md:mt-0">
+                    <a href="#" class="mr-6 hover:text-white transition-colors duration-300">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors duration-300">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Change icon
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        
+        // Header scroll effect
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg', 'bg-white');
+                header.classList.remove('glass-effect');
+            } else {
+                header.classList.remove('shadow-lg', 'bg-white');
+                header.classList.add('glass-effect');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                
+                e.preventDefault();
+                const targetElement = document.querySelector(href);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                    mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                }
+            });
+        });
+        
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all elements for animation
+        document.querySelectorAll('section, .animate-fade-in, .animate-slide-up').forEach(element => {
+            observer.observe(element);
+        });
+        
+        // Partner category filter functionality
+        document.querySelectorAll('.flex-wrap button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Update active state
+                document.querySelectorAll('.flex-wrap button').forEach(btn => {
+                    btn.classList.remove('bg-primary', 'text-white');
+                    btn.classList.add('bg-white', 'text-gray-700');
+                });
+                this.classList.remove('bg-white', 'text-gray-700');
+                this.classList.add('bg-primary', 'text-white');
+            });
+        });
+    </script>
+</body>
+</html>
