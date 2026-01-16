@@ -4,13 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - EXREP Network</title>
-    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Custom Tailwind Configuration -->
     <script>
         tailwind.config = {
             theme: {
@@ -44,7 +40,6 @@
         }
     </script>
     <style>
-        /* Custom styles */
         body {
             font-family: 'Inter', sans-serif;
         }
@@ -61,9 +56,9 @@
         }
         
         .glass-effect {
-            background: rgba(255, 255, 255, 0.7);
+            background: rgba(17, 24, 39, 0.8);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .card-hover {
@@ -77,24 +72,35 @@
         
         .form-input {
             transition: all 0.3s ease;
-            border: 2px solid #E5E7EB;
+            border: 2px solid #374151;
+            background-color: #111827;
+            color: #F3F4F6;
         }
         
         .form-input:focus {
             border-color: #1E3A8A;
-            box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+            box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.2);
+            background-color: #1F2937;
+        }
+        
+        .form-input::placeholder {
+            color: #9CA3AF;
         }
         
         .form-select {
             appearance: none;
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
             background-position: right 0.5rem center;
             background-repeat: no-repeat;
             background-size: 1.5em 1.5em;
             padding-right: 2.5rem;
         }
         
-        /* Success message styling */
+        .form-select option {
+            background-color: #111827;
+            color: #F3F4F6;
+        }
+        
         .success-message {
             opacity: 0;
             transform: translateY(-10px);
@@ -109,7 +115,7 @@
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-black text-gray-100">
 <!-- Header -->
     <header id="header" class="fixed top-0 left-0 w-full z-50 py-4 transition-all duration-300 glass-effect">
         <div class="container mx-auto px-2 md:px-4">
@@ -119,45 +125,45 @@
                         <img src="exrep.png" alt="Exrep Logo" class="w-15 h-10 object-cover bg-transparent rounded-none p-0 border-0 shadow-none">
                     
                     <div class="flex flex-col">
-                        <h1 class="text-2xl font-bold text-primary">Exrep</h1>
-                        <p class="text-xs text-gray-500 font-medium">Innovating for Nigeria</p>
+                        <h1 class="text-2xl font-bold text-white">Exrep</h1>
+                        <p class="text-xs text-gray-400 font-medium">Innovating for Nigeria</p>
                     </div>
                 </div>
                 
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="font-medium text-gray-700 hover:text-primary transition-colors duration-300">Home</a>
-                    <a href="about.html" class="font-medium text-gray-700 hover:text-primary transition-colors duration-300">About</a>
-                    <a href="partners.html" class="font-medium text-gray-700 hover:text-primary transition-colors duration-300">Partners</a>
-                    <a href="contact.html" class="font-medium text-gray-700 hover:text-primary transition-colors duration-300">Contact</a>
+                    <a href="index.html" class="font-medium text-gray-300 hover:text-white transition-colors duration-300">Home</a>
+                    <a href="about.html" class="font-medium text-gray-300 hover:text-white transition-colors duration-300">About</a>
+                    <a href="partners.html" class="font-medium text-gray-300 hover:text-white transition-colors duration-300">Partners</a>
+                    <a href="contact.html" class="font-medium text-gray-300 hover:text-white transition-colors duration-300">Contact</a>
                 </nav>
                 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-gray-700 text-2xl">
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 text-2xl">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-4 px-6 hidden">
+        <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-black shadow-lg py-4 px-6 hidden">
             <div class="flex flex-col space-y-4">
-                <a href="#" class="font-medium text-gray-700 hover:text-primary py-2">Home</a>
-                <a href="#" class="font-medium text-gray-700 hover:text-primary py-2">About</a>
-                <a href="#" class="font-medium text-gray-700 hover:text-primary py-2">Partners</a>
-                <a href="#" class="font-medium text-gray-700 hover:text-primary py-2">Contact</a>
+                <a href="index.html" class="font-medium text-gray-300 hover:text-white py-2">Home</a>
+                <a href="about.html" class="font-medium text-gray-300 hover:text-white py-2">About</a>
+                <a href="partners.html" class="font-medium text-gray-300 hover:text-white py-2">Partners</a>
+                <a href="contact.html" class="font-medium text-gray-300 hover:text-white py-2">Contact</a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="pt-28 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-blue-50 via-white to-amber-50">
+    <section class="pt-28 pb-16 md:pt-32 md:pb-24 bg-black">
         <div class="container mx-auto px-4 md:px-8">
             <div class="max-w-4xl mx-auto text-center animate-slide-up">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
                     Let's Discuss Your <span class="gradient-text">African Expansion</span>
                 </h1>
-                <p class="text-xl text-gray-600 mb-8">
+                <p class="text-xl text-gray-300 mb-8">
                     Ready to unlock Nigeria's potential? Our team is here to guide your journey.
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center gap-4">
@@ -173,278 +179,194 @@
     </section>
 
     <!-- Contact Form & Info Section -->
-    <section class="py-16 md:py-24 bg-white">
+    <section class="py-16 md:py-24 bg-black">
         <div class="container mx-auto px-4 md:px-8">
             <div class="grid lg:grid-cols-3 gap-12">
                 <!-- Contact Information -->
                 <div class="lg:col-span-1 space-y-8 animate-fade-in">
                     <div>
-                        <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
-                        <p class="text-gray-600 mb-8">
+                        <h2 class="text-3xl font-bold mb-6 text-white">Get in Touch</h2>
+                        <p class="text-gray-300 mb-8">
                             Have questions about partnering with EXREP Network? Reach out to our team for personalized guidance on your African expansion strategy.
                         </p>
                     </div>
                     
                     <!-- Contact Items -->
                     <div class="space-y-8">
-                        <!-- Email -->
                         <div class="flex items-start">
                             <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
                                 <i class="fas fa-envelope text-xl text-primary"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg mb-2">Email</h4>
+                                <h4 class="font-bold text-lg mb-2 text-white">Email</h4>
                                 <div class="space-y-2">
                                     <div>
-                                        <a href="mailto:info@exrepnetwork.com" class="text-gray-600 hover:text-primary transition-colors duration-300">
-                                            info@exrepnetwork.com
+                                        <a href="mailto:exrepnetwork@gmail.com" class="text-gray-400 hover:text-primary transition-colors duration-300">
+                                            exrepnetwork@gmail.com
                                         </a>
                                         <p class="text-gray-500 text-sm">General inquiries</p>
-                                    </div>
-                                    <div>
-                                        <a href="mailto:partnerships@exrepnetwork.com" class="text-gray-600 hover:text-primary transition-colors duration-300">
-                                            partnerships@exrepnetwork.com
-                                        </a>
-                                        <p class="text-gray-500 text-sm">For partnership inquiries</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
-                        <!-- Phone -->
                         <div class="flex items-start">
                             <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
                                 <i class="fas fa-phone text-xl text-secondary"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg mb-2">Phone</h4>
+                                <h4 class="font-bold text-lg mb-2 text-white">Phone</h4>
                                 <div class="space-y-2">
                                     <div>
-                                        <a href="tel:+234XXXXXXXXXX" class="text-gray-600 hover:text-primary transition-colors duration-300">
-                                            +234 XXX XXX XXXX
+                                        <a href="tel:+234XXXXXXXXXX" class="text-gray-400 hover:text-primary transition-colors duration-300">
+                                            +234 814 185 7196
                                         </a>
                                         <p class="text-gray-500 text-sm">Mon-Fri, 9AM - 6PM WAT</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
-                        <!-- Location -->
                         <div class="flex items-start">
                             <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
                                 <i class="fas fa-map-marker-alt text-xl text-accent"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg mb-2">Location</h4>
+                                <h4 class="font-bold text-lg mb-2 text-white">Location</h4>
                                 <div class="space-y-2">
                                     <div>
-                                        <p class="text-gray-600">Lagos, Nigeria</p>
+                                        <p class="text-gray-400">Abuja, Nigeria</p>
                                         <p class="text-gray-500 text-sm">Full address to be provided upon request</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Social Media -->
-                    <div class="pt-8 border-t border-gray-200">
-                        <h4 class="font-bold text-lg mb-4">Follow Us</h4>
-                        <p class="text-gray-600 mb-6">
-                            Stay connected with EXREP Network on social media for the latest updates and insights on African market expansion.
-                        </p>
-                        <div class="flex space-x-4">
-                            <a href="#" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors duration-300">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="#" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors duration-300">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors duration-300">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors duration-300">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </div>
-                    </div>
                 </div>
                 
                 <!-- Contact Form -->
                 <div class="lg:col-span-2 animate-slide-up">
-                    <div class="bg-gray-50 rounded-2xl p-8 shadow-lg">
-                        <h3 class="text-2xl font-bold mb-2">Send Us a Message</h3>
-                        <p class="text-gray-600 mb-8">Fill out the form below and we'll get back to you within 24 hours.</p>
-                        
-                        <!-- Success Message -->
-                        <div id="successMessage" class="success-message bg-green-50 border border-green-200 text-green-700 rounded-xl p-6 mb-8">
+                    <div class="bg-gray-900 rounded-2xl p-8 shadow-lg border border-gray-800">
+                        <h3 class="text-2xl font-bold mb-2 text-white">Send Us a Message</h3>
+                        <p class="text-gray-400 mb-8">Fill out the form below and we'll get back to you within 24 hours.</p>
+                        <div id="successMessage" class="success-message bg-green-900/30 border border-green-800 text-green-400 rounded-xl p-6 mb-8">
                             <div class="flex items-center">
                                 <i class="fas fa-check-circle text-2xl mr-4 text-green-500"></i>
                                 <div>
                                     <div class="font-bold">Thank you for your message!</div>
-                                    <div>We'll get back to you within 24 hours.</div>
+                                    <div class="text-green-300">We'll get back to you within 24 hours.</div>
                                 </div>
                             </div>
                         </div>
                         
-                        <!-- FORMSPREE FORM - THIS IS THE KEY SECTION -->
-<!-- 
-    REPLACE "YOUR_FORMSPREE_ID_HERE" with your actual Formspree form ID
-    Example: https://formspree.io/f/xjvqjwpa 
--->
-<form 
-    id="contactForm" 
-    action="https://formspree.io/f/mqeajlee" 
-    method="POST"
->
-    <!-- Hidden fields for Formspree configuration -->
-    <input type="hidden" name="_subject" value="New EXREP Network Contact Form Submission">
-    <!-- Remove or fix the _replyto line -->
-    <!-- <input type="hidden" name="_replyto" value="email"> -->
-    <input type="hidden" name="_language" value="en">
-    
-    <!-- Honeypot field to reduce spam -->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true">
-        <input type="text" name="_gotcha" tabindex="-1">
-    </div>
-    
-    <div class="grid md:grid-cols-2 gap-6 mb-6">
-        <!-- Full Name -->
-        <div>
-            <label for="fullName" class="block text-sm font-medium text-gray-700 mb-2">
-                Full Name <span class="text-red-500">*</span>
-            </label>
-            <input 
-                type="text" 
-                id="fullName" 
-                name="fullName" 
-                class="form-input w-full px-4 py-3 rounded-lg" 
-                required
-            >
-        </div>
-        
-        <!-- Email - MAKE SURE THIS HAS name="email" -->
-        <div>
-            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
-                Email Address <span class="text-red-500">*</span>
-            </label>
-            <input 
-                type="email" 
-                id="email" 
-                name="email" 
-                class="form-input w-full px-4 py-3 rounded-lg" 
-                required
-            >
-        </div>
-        
-        <!-- Phone -->
-        <div>
-            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">
-                Phone Number <span class="text-gray-500 text-sm">(Optional)</span>
-            </label>
-            <input 
-                type="tel" 
-                id="phone" 
-                name="phone" 
-                class="form-input w-full px-4 py-3 rounded-lg"
-            >
-        </div>
-        
-        <!-- Company -->
-        <div>
-            <label for="company" class="block text-sm font-medium text-gray-700 mb-2">
-                Company Name <span class="text-red-500">*</span>
-            </label>
-            <input 
-                type="text" 
-                id="company" 
-                name="company" 
-                class="form-input w-full px-4 py-3 rounded-lg" 
-                required
-            >
-        </div>
-        
-        <!-- Industry -->
-        <div>
-            <label for="industry" class="block text-sm font-medium text-gray-700 mb-2">
-                Industry/Sector <span class="text-red-500">*</span>
-            </label>
-            <select 
-                id="industry" 
-                name="industry" 
-                class="form-select form-input w-full px-4 py-3 rounded-lg bg-white" 
-                required
-            >
-                <option value="">Select Industry</option>
-                <option value="ecommerce">E-commerce</option>
-                <option value="technology">Technology</option>
-                <option value="consumer-goods">Consumer Goods</option>
-                <option value="fashion">Fashion</option>
-                <option value="health-wellness">Health & Wellness</option>
-                <option value="other">Other</option>
-            </select>
-        </div>
-        
-        <!-- Subject -->
-        <div>
-            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">
-                Subject <span class="text-red-500">*</span>
-            </label>
-            <input 
-                type="text" 
-                id="subject" 
-                name="subject" 
-                class="form-input w-full px-4 py-3 rounded-lg" 
-                required
-            >
-        </div>
-    </div>
-    
-    <!-- Message -->
-    <div class="mb-8">
-        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
-            Message <span class="text-red-500">*</span>
-        </label>
-        <textarea 
-            id="message" 
-            name="message" 
-            rows="6" 
-            class="form-input w-full px-4 py-3 rounded-lg" 
-            required 
-            minlength="10"
-        ></textarea>
-        <div class="text-gray-500 text-sm mt-2">Minimum 10 characters</div>
-    </div>
-    
-    <!-- Submit Button -->
-    <button 
-        type="submit" 
-        class="w-full bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition-colors duration-300 shadow-lg hover:shadow-xl"
-    >
-        Send Message <i class="ml-2 fas fa-paper-plane"></i>
-    </button>
-</form>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Map Placeholder -->
-            <div class="mt-16 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl p-12 text-center animate-fade-in">
-                <div class="max-w-2xl mx-auto">
-                    <div class="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-map-marked-alt text-white text-3xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Our Location</h3>
-                    <p class="text-gray-600 mb-8">
-                        Based in Lagos, Nigeria's commercial capital, we're strategically positioned to serve as your operational hub for West African expansion.
-                    </p>
-                    <div class="bg-white rounded-xl p-8 shadow-inner">
-                        <div class="h-64 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center">
-                            <div class="text-center">
-                                <i class="fas fa-map text-gray-300 text-6xl mb-4"></i>
-                                <p class="text-gray-600 font-medium">Map Location</p>
-                                <p class="text-gray-500 text-sm mt-2">(Would display Google Maps integration)</p>
+                        <!-- FORMSPREE -->
+                        <form id="contactForm" action="https://formspree.io/f/mqeajlee" method="POST">
+                            <input type="hidden" name="_subject" value="New EXREP Network Contact Form Submission">
+                            <input type="hidden" name="_language" value="en">
+
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                <input type="text" name="_gotcha" tabindex="-1">
                             </div>
-                        </div>
+
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="fullName" class="block text-sm font-medium text-gray-300 mb-2">
+                                        Full Name <span class="text-red-400">*</span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="fullName" 
+                                        name="fullName" 
+                                        class="form-input w-full px-4 py-3 rounded-lg" 
+                                        required
+                                    >
+                                </div>
+                                <div>
+                                    <label for="email" name="email" class="block text-sm font-medium text-gray-300 mb-2">
+                                        Email Address <span class="text-red-400">*</span>
+                                    </label>
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        name="email" 
+                                        class="form-input w-full px-4 py-3 rounded-lg" 
+                                        required
+                                    >
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">
+                                        Phone Number <span class="text-gray-500 text-sm">(Optional)</span>
+                                    </label>
+                                    <input 
+                                        type="tel" 
+                                        id="phone" 
+                                        name="phone" 
+                                        class="form-input w-full px-4 py-3 rounded-lg"
+                                    >
+                                </div>
+                                <div>
+                                    <label for="company" class="block text-sm font-medium text-gray-300 mb-2">
+                                        Company Name <span class="text-red-400">*</span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="company" 
+                                        name="company" 
+                                        class="form-input w-full px-4 py-3 rounded-lg" 
+                                        required
+                                    >
+                                </div>
+                                <div>
+                                    <label for="industry" class="block text-sm font-medium text-gray-300 mb-2">
+                                        Industry/Sector <span class="text-red-400">*</span>
+                                    </label>
+                                    <select 
+                                        id="industry" 
+                                        name="industry" 
+                                        class="form-select form-input w-full px-4 py-3 rounded-lg bg-gray-900" 
+                                        required
+                                    >
+                                        <option value="">Select Industry</option>
+                                        <option value="ecommerce">E-commerce</option>
+                                        <option value="technology">Technology</option>
+                                        <option value="consumer-goods">Consumer Goods</option>
+                                        <option value="fashion">Fashion</option>
+                                        <option value="health-wellness">Health & Wellness</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">
+                                        Subject <span class="text-red-400">*</span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="subject" 
+                                        name="subject" 
+                                        class="form-input w-full px-4 py-3 rounded-lg" 
+                                        required
+                                    >
+                                </div>
+                            </div>
+                            <div class="mb-8">
+                                <label for="message" class="block text-sm font-medium text-gray-300 mb-2">
+                                    Message <span class="text-red-400">*</span>
+                                </label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    rows="6" 
+                                    class="form-input w-full px-4 py-3 rounded-lg" 
+                                    required 
+                                    minlength="10"
+                                ></textarea>
+                                <div class="text-gray-500 text-sm mt-2">Minimum 10 characters</div>
+                            </div>
+                            <button 
+                                type="submit" 
+                                class="w-full bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition-colors duration-300 shadow-lg hover:shadow-xl"
+                            >
+                                Send Message <i class="ml-2 fas fa-paper-plane"></i>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -452,25 +374,25 @@
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="py-16 md:py-24 bg-gray-50">
+    <section id="faq" class="py-16 md:py-24 bg-black">
         <div class="container mx-auto px-4 md:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">Frequently Asked Questions</h2>
-                <p class="text-lg text-gray-600">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Frequently Asked Questions</h2>
+                <p class="text-lg text-gray-400">
                     Get quick answers to common questions about partnering with EXREP Network
                 </p>
             </div>
             
             <div class="max-w-4xl mx-auto">
                 <!-- FAQ 1 -->
-                <div class="bg-white rounded-2xl p-8 mb-6 card-hover animate-fade-in">
+                <div class="bg-gray-900 rounded-2xl p-8 mb-6 card-hover animate-fade-in border border-gray-800">
                     <div class="flex items-start">
                         <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
                             <i class="fas fa-rocket text-primary text-xl"></i>
                         </div>
                         <div>
-                            <h4 class="text-xl font-bold mb-4">How quickly can EXREP Network help us launch in Nigeria?</h4>
-                            <p class="text-gray-600">
+                            <h4 class="text-xl font-bold mb-4 text-white">How quickly can EXREP Network help us launch in Nigeria?</h4>
+                            <p class="text-gray-400">
                                 We typically achieve full operational readiness in 6-8 weeks from contract signing, depending on your specific requirements and product complexity. Our streamlined processes and established local networks enable rapid deployment.
                             </p>
                         </div>
@@ -478,14 +400,14 @@
                 </div>
                 
                 <!-- FAQ 2 -->
-                <div class="bg-white rounded-2xl p-8 mb-6 card-hover animate-fade-in">
+                <div class="bg-gray-900 rounded-2xl p-8 mb-6 card-hover animate-fade-in border border-gray-800">
                     <div class="flex items-start">
                         <div class="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
                             <i class="fas fa-industry text-secondary text-xl"></i>
                         </div>
                         <div>
-                            <h4 class="text-xl font-bold mb-4">What industries do you work with?</h4>
-                            <p class="text-gray-600">
+                            <h4 class="text-xl font-bold mb-4 text-white">What industries do you work with?</h4>
+                            <p class="text-gray-400">
                                 We work with brands across e-commerce, technology, consumer goods, fashion, health & wellness, and creative services. Our operational expertise is adaptable to various sectors. If your industry isn't listed, contact us to discuss your specific needs - we're always exploring new opportunities.
                             </p>
                         </div>
@@ -493,14 +415,14 @@
                 </div>
                 
                 <!-- FAQ 3 -->
-                <div class="bg-white rounded-2xl p-8 mb-6 card-hover animate-fade-in">
+                <div class="bg-gray-900 rounded-2xl p-8 mb-6 card-hover animate-fade-in border border-gray-800">
                     <div class="flex items-start">
                         <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
                             <i class="fas fa-shield-alt text-accent text-xl"></i>
                         </div>
                         <div>
-                            <h4 class="text-xl font-bold mb-4">Do you require any upfront capital investment?</h4>
-                            <p class="text-gray-600">
+                            <h4 class="text-xl font-bold mb-4 text-white">Do you require any upfront capital investment?</h4>
+                            <p class="text-gray-400">
                                 No. Our partnership model requires zero capital investment from your company. We provide all necessary infrastructure and only charge operational fees based on usage. This risk-free approach allows you to test the market without significant financial commitment.
                             </p>
                         </div>
@@ -508,14 +430,14 @@
                 </div>
                 
                 <!-- FAQ 4 -->
-                <div class="bg-white rounded-2xl p-8 mb-6 card-hover animate-fade-in">
+                <div class="bg-gray-900 rounded-2xl p-8 mb-6 card-hover animate-fade-in border border-gray-800">
                     <div class="flex items-start">
-                        <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
-                            <i class="fas fa-clipboard-check text-green-600 text-xl"></i>
+                        <div class="w-12 h-12 bg-green-900 rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
+                            <i class="fas fa-clipboard-check text-green-400 text-xl"></i>
                         </div>
                         <div>
-                            <h4 class="text-xl font-bold mb-4">How do you ensure quality control with local manufacturers?</h4>
-                            <p class="text-gray-600">
+                            <h4 class="text-xl font-bold mb-4 text-white">How do you ensure quality control with local manufacturers?</h4>
+                            <p class="text-gray-400">
                                 We have a rigorous vetting process for manufacturing partners and implement quality control checkpoints throughout the production process to ensure products meet international standards. Our quality assurance team conducts regular audits and provides detailed reporting to maintain transparency.
                             </p>
                         </div>
@@ -533,30 +455,27 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 md:py-24 bg-gradient-to-r from-primary to-primary-dark text-white">
+    <section class="py-16 md:py-24 bg-black text-white border-t border-gray-800">
         <div class="container mx-auto px-4 md:px-8">
             <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">Start Your African Expansion Journey Today</h2>
-                <p class="text-xl opacity-90 mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Start Your African Expansion Journey Today</h2>
+                <p class="text-xl text-gray-300 mb-10">
                     Join industry leaders who have successfully expanded into Nigeria with EXREP Network's operational expertise.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row justify-center gap-6">
-                    <a href="#contactForm" class="bg-white text-primary px-10 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl">
+                    <a href="#contactForm" class="bg-primary text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-primary-dark transition-colors duration-300 shadow-lg hover:shadow-xl">
                         Get Started Now <i class="ml-2 fas fa-arrow-right"></i>
-                    </a>
-                    <a href="partners.html" class="bg-transparent border-2 border-white text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors duration-300">
-                        View Success Stories
                     </a>
                 </div>
                 
                 <!-- Response Time Guarantee -->
-                <div class="mt-12 bg-white/10 backdrop-blur-sm rounded-xl p-6 max-w-2xl mx-auto">
+                <div class="mt-12 bg-gray-900 backdrop-blur-sm rounded-xl p-6 max-w-2xl mx-auto border border-gray-800">
                     <div class="flex items-center justify-center">
-                        <i class="fas fa-clock text-3xl mr-4 opacity-90"></i>
+                        <i class="fas fa-clock text-3xl mr-4 text-gray-400"></i>
                         <div class="text-left">
                             <div class="font-bold text-lg">24-Hour Response Guarantee</div>
-                            <div class="opacity-90">We guarantee to respond to your inquiry within 24 hours</div>
+                            <div class="text-gray-300">We guarantee to respond to your inquiry within 24 hours</div>
                         </div>
                     </div>
                 </div>
@@ -565,7 +484,7 @@
     </section>
 
 <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-12">
+    <footer class="bg-black text-gray-300 py-12 border-t border-gray-800">
         <div class="container mx-auto px-4 md:px-8">
             <div class="grid md:grid-cols-5 gap-8 mb-12">
                 <div class="md:col-span-2">
@@ -601,7 +520,7 @@
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope mr-3 text-primary"></i>
-                            <span>info@exrep.com</span>
+                            <span>exrepnetwork@gmail.com</span>
                         </li>
                     </ul>
                 </div>
@@ -624,52 +543,32 @@
         
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
-            // Change icon
             const icon = mobileMenuBtn.querySelector('i');
             icon.classList.toggle('fa-bars');
             icon.classList.toggle('fa-times');
-        });
-        
-        // Header scroll effect
-        const header = document.getElementById('header');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('shadow-lg', 'bg-white');
-                header.classList.remove('glass-effect');
-            } else {
-                header.classList.remove('shadow-lg', 'bg-white');
-                header.classList.add('glass-effect');
-            }
         });
         
         // Form submission handler for Formspree
         const contactForm = document.getElementById('contactForm');
         const successMessage = document.getElementById('successMessage');
         
-        // Optional: Client-side validation before Formspree submission
+        // Client-side validation before Formspree submission
         contactForm.addEventListener('submit', function(e) {
-            // You can add client-side validation here if you want
-            // But Formspree will handle validation on their side too
-            
-            // Example: Show loading state
             const submitButton = contactForm.querySelector('button[type="submit"]');
             const originalText = submitButton.innerHTML;
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
             submitButton.disabled = true;
             
-            // Success message will be shown after Formspree processes the form
-            // Formspree redirects back to your page with ?success parameter
+            // Formspree 
             
             // Check if we're returning from a successful Formspree submission
             const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.has('success')) {
                 successMessage.classList.add('show');
-                // Clear the URL parameter
                 window.history.replaceState({}, document.title, window.location.pathname);
             }
             
-            // Reset button state after 5 seconds (in case submission fails)
+            // Reset button state after 5 seconds (in submission failure)
             setTimeout(() => {
                 submitButton.innerHTML = originalText;
                 submitButton.disabled = false;
@@ -688,7 +587,7 @@
         });
         
         // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        document.querySelectorAll('a[href="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 const href = this.getAttribute('href');
                 if (href === '#') return;
@@ -701,7 +600,7 @@
                         behavior: 'smooth'
                     });
                     
-                    // Close mobile menu if open
+                    // Close mobile menu 
                     mobileMenu.classList.add('hidden');
                     mobileMenuBtn.querySelector('i').classList.remove('fa-times');
                     mobileMenuBtn.querySelector('i').classList.add('fa-bars');
